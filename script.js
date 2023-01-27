@@ -186,7 +186,6 @@ const searchTable = function() {
     let k = 1;
     for(let i = 0; i < totalEntries; i++) {
         if(storageName[i].includes(val)) {
-            console.log("hai");
             showData(storage[i].firstName, storage[i].lastName, storage[i].num, k++);
             createEventListner()
         }
