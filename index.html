@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Enter Details</h1>
+    <form>
+        <div class="container">
+            <div class="nameContainer">
+                <input class="name firstName" type="text" placeholder="First Name" required>
+                <input class="name lastName" type="text" placeholder="Last Name" required>
+            </div>
+            <input class="phoneNumber" type="number" placeholder="Phone Number" required>
+            <button id="submit" type="submit">Save</button>
+            <span class="error hidden">The name or the number already exists!</span>
+        </div>
+    </form>
+
+
+    <div class="searchBar">
+        <input class="searchBarInput" type="text" placeholder="Search Here">
+    </div>
+    <table class="outputContainer">
+        <tr>
+            <th class="sNoHeader">Serial Number</th>
+            <th class="nameHeader">Name</th>
+            <th class="pNoHeader">Phone Number</th>
+            <th class="deleteHeader">Delete</th>
+        </tr>
+        <!-- <tr>
+            <td class="sNo">1</td>
+            <td class="name">Shruti Sharma</td>
+            <td class="pNo">+917505250477</td>
+            <td class="delete">X</td>
+        </tr>
+        <tr>
+            <td class="sNo">1</td>
+            <td class="name">Shruti Sharma</td>
+            <td class="pNo">+917505250477</td>
+            <td class="delete">X</td>
+        </tr>
+        <tr>
+            <td class="sNo">1</td>
+            <td class="name">Shruti Sharma</td>
+            <td class="pNo">+917505250477</td>
+            <td class="delete">X</td>
+        </tr>
+        <tr>
+            <td class="sNo">1</td>
+            <td class="name">Shruti Sharma</td>
+            <td class="pNo">+917505250477</td>
+            <td class="delete">X</td>
+        </tr>
+        <tr>
+            <td class="sNo">1</td>
+            <td class="name">Shruti Sharma</td>
+            <td class="pNo">+917505250477</td>
+            <td class="delete">X</td>
+        </tr> -->
+    </table>
+
+    <div class="overlay hidden"></div>
+    <div class="hidden modal">
+        <p>Are you sure you want to delete this record?</p>
+        <button class="deleteYes">Yes</button>
+        <button class="deleteCancel">Cancel</button>
+    </div>
+
+</body>
+</html>
