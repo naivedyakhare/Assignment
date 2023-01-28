@@ -42,9 +42,9 @@ const submitForm = function(e) {
         storageName.push(name)
         storageNumber.push(number)
 
-        firstNameInput.value = "";
-        lastNameInput.value = "";
-        phoneNumberInput.value = "";
+        // firstNameInput.value = "";
+        // lastNameInput.value = "";
+        // phoneNumberInput.value = "";
         
         showData(firstName, lastName, number)
         totalEntries++;
@@ -172,24 +172,33 @@ deleteCancel.addEventListener("click", function() {
 })
 
 
+let prevVal;
+let currVal;
 const searchTable = function() {
-    const val = searchField.value;
+    currVal = searchField.value;
     if(document.activeElement != searchField){
         return;
     }
-    if(val == "") {
+    if(prevVal == "") {
+        console.log("Hello")
+        return;
+    }
+    if(currVal == "") {
         output(null, false)
+        prevVal = currVal
+        createEventListner()
         return;
     }
     table.innerHTML = ""
     insertTableHeader()
     let k = 1;
     for(let i = 0; i < totalEntries; i++) {
-        if(storageName[i].includes(val)) {
+        if(storageName[i].includes(currVal)) {
             showData(storage[i].firstName, storage[i].lastName, storage[i].num, k++);
             createEventListner()
         }
     }
+    prevVal = currVal
     
 }
 setInterval(searchTable, 1000)
