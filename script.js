@@ -42,9 +42,9 @@ const submitForm = function(e) {
         storageName.push(name)
         storageNumber.push(number)
 
-        // firstNameInput.value = "";
-        // lastNameInput.value = "";
-        // phoneNumberInput.value = "";
+        firstNameInput.value = "";
+        lastNameInput.value = "";
+        phoneNumberInput.value = "";
         
         showData(firstName, lastName, number)
         totalEntries++;
@@ -119,6 +119,7 @@ const output = function(e, flag = true) {
 
     nameHeader = document.querySelector(".nameHeader");
     nameHeader.addEventListener('click', output)
+    createEventListner()
 }
 
 const deleteRecordFunction = function(e) {
@@ -142,7 +143,6 @@ const removeRecord = function(deleteName, deleteNumber) {
     }
     storage.splice(i,1);
     output(null, false)
-    createEventListner();
 }
 
 //EVENT LISTNERS
@@ -186,7 +186,6 @@ const searchTable = function() {
     if(currVal == "") {
         output(null, false)
         prevVal = currVal
-        createEventListner()
         return;
     }
     table.innerHTML = ""
