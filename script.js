@@ -42,9 +42,9 @@ const submitForm = function(e) {
         storageName.push(name)
         storageNumber.push(number)
 
-        firstNameInput.value = "";
-        lastNameInput.value = "";
-        phoneNumberInput.value = "";
+        // firstNameInput.value = "";
+        // lastNameInput.value = "";
+        // phoneNumberInput.value = "";
         
         showData(firstName, lastName, number)
         totalEntries++;
@@ -180,7 +180,7 @@ const searchTable = function() {
         return;
     }
     if(prevVal == "") {
-        console.log("Hello")
+        prevVal = currVal
         return;
     }
     if(currVal == "") {
@@ -200,4 +200,4 @@ const searchTable = function() {
     prevVal = currVal
     
 }
-setInterval(searchTable, 1000)
+setInterval(searchTable, 100)
